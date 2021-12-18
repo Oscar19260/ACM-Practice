@@ -1,11 +1,7 @@
 # https://codeforces.com/contest/158/problem/C
-# no jala con el test 7
-# Israel
 import re
 import sys
-
 pattern1="(pwd|cd)( (\/)?(.+))?"
-pattern2="[^\/]+"
 actual_dir=['/']
 n=int(input())
 for i in range(n):
@@ -15,6 +11,8 @@ for i in range(n):
     if split_line.group(2):
         dire=split_line.group(4)
         dirs=dire.split('/')
+        if split_line.group(3):
+            actual_dir=['/']
         for element in dirs:
             if element=="..":
                 actual_dir.pop()
