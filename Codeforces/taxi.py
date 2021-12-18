@@ -1,4 +1,5 @@
 # https://codeforces.com/contest/158/problem/B
+
 def ntaxis(n, s):
   taxis = 0
   agroup = 0
